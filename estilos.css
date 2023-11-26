@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    
+  }
+  
+  #aplicacion {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #menu {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #listaSujetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto); 
+  }
+  
+  @media (min-width: 1000px) {
+    #listaSujetos {
+      grid-template-columns: repeat(5, 1fr); 
+    }
+  }
+  
+  
+  .tarjetaSujeto {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .tarjetaSujeto img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  #formulario {
+    margin-top: 20px;
+  }
+
+  
+ 
+  
+
+  
+  

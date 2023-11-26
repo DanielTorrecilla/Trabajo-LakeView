@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>LakeView Investigación</title>
+</head>
+<body>
+    <button type="button" onclick="cambiarVista()">Cambiar Vista</button>
+
+  <div id="aplicacion">
+    <h1>LakeView Investigación</h1>
+    <div id="menu">
+      
+       <button onclick="mostrarFormulario()">Agregar Sujeto</button>
+    </div>
+
+    <div id="listaSujetos"></div>
+
+    <div id="formulario" style="display: none;">
+      <h2>Información del Sujeto</h2>
+    
+      <form onsubmit="guardarSujeto(event)">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="tipo">Tipo:</label>
+          <select id="tipo" name="tipo" required>
+            <option value="vivo">Vivo</option>
+            <option value="descargado">Descargado</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <label for="ubicacion">Ubicación:</label>
+          <input type="text" id="ubicacion" name="ubicacion" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="descargadoDesde">Descargado Desde:</label>
+          <input type="text" id="descargadoDesde" name="descargadoDesde">
+        </div>
+    
+        <div class="form-group">
+          <label for="culpabilidad">Culpabilidad:</label>
+          <select id="culpabilidad" name="culpabilidad" required>
+            <option value="posible cooperador">Posible Cooperador</option>
+            <option value="cooperador">Cooperador</option>
+            <option value="delincuente">Delincuente</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <label for="urlImagen">URL de la Imagen:</label>
+          <input type="text" id="urlImagen" name="urlImagen">
+        </div>
+    
+        <div class="form-group">
+          <label for="comentarios">Comentarios:</label>
+          <textarea id="comentarios" name="comentarios"></textarea>
+        </div>
+    
+        <div class="form-buttons">
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
